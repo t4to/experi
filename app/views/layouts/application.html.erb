@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experi</title>
+  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag "http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.css" %>
+  <%= javascript_include_tag :all %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div data-role="page" id="twitter" data-theme="b">
+
+	<div data-role="header">
+		<h1>@t4to</h1>
+		<a href="#" onClick="history.go(0)" id="btnAtualizar" data-icon="refresh" class="ui-btn-right">Atualizar</a>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+
+		<%= yield %>	
+	
+		<!--<div id="posts"><img src="images/loader.gif">Carregando tweets...</div>-->
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
+</html>

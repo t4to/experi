@@ -1,0 +1,5 @@
+<ul data-role="listview" id="posts" data-theme="d" data-inset="true">
+	<% @resp.each do |r| %>
+		<li><h5><%= r.text %></h5></li>
+	<% end %>
+</ul>
