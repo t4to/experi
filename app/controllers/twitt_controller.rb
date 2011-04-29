@@ -7,7 +7,7 @@ class TwittController < ApplicationController
   
 	search = Twitter::Search.new
 
-	@resp = search.from(screen_name).per_page(10).fetch
+	@resp = Twitter.user_timeline('t4to', :count => 10)
 
 	search.clear
   end
